@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính Cộng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        input {
+            width: 300px;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+        }
+        input:focus {
+            border-color: #007BFF; /* Màu xanh dương */
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Hiệu ứng ánh sáng */
+        }
+        input::placeholder {
+            color: #aaa; /* Màu chữ placeholder */
+            font-style: italic;
+        }
+		p {
+            width: 80%;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #e0f7fa;
+            border: 2px solid #00796b;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            color: #004d40;
+            text-align: justify;
+        }
+		<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Định dạng button</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        button {
+            background-color: #007BFF; /* Màu nền */
+            color: white; /* Màu chữ */
+            border: none; /* Xóa viền */
+            border-radius: 5px; /* Bo góc */
+            padding: 10px 20px; /* Khoảng cách bên trong */
+            font-size: 16px; /* Kích thước chữ */
+            font-weight: bold; /* Chữ đậm */
+            cursor: pointer; /* Đổi con trỏ chuột */
+            transition: all 0.3s ease-in-out; /* Hiệu ứng hover */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Màu khi hover */
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng khi hover */
+            transform: translateY(-2px); /* Nút hơi nhô lên */
+        }
+
+        button:active {
+            transform: translateY(2px); /* Nút nhấn xuống */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Đổ bóng gần hơn */
+        }
+    </style>
+</head>
+<body>
+    <h1>Máy tính cho thủy tiên nha</h1>
+    <input type="number" id="num1" placeholder="Nhập số giờ">
+    <button onclick="calculateSum()">Tính Tổng</button>
+    <p id="result">Kết quả: </p>
+    <script>
+	const input = document.getElementById('num1');
+        input.addEventListener('focus', function() {
+            input.select(); // Tự động chọn tất cả nội dung
+        });
+        function calculateSum() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+			if(Number.isNaN(num1)){
+			document.getElementById('result').innerText = "Kết quả: ";
+			}else{
+			var num2 = new Date(2025, 03, 11, 7, 0, 0, 0);
+            num2.setMinutes((num1 * 60 + 90));
+			var a = num2.getHours() + ":" + num2.getMinutes();
+            document.getElementById('result').innerText = "Kết quả: " + a;
+			}
+        }
+    </script>
+</body>
+</html>

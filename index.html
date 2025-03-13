@@ -88,8 +88,12 @@
 			}else{
 			var num2 = new Date(2025, 03, 11, 7, 0, 0, 0);
             num2.setMinutes((num1 * 60 + 90));
-			var a = num2.getHours() + ":" + num2.getMinutes();
-            document.getElementById('result').innerText = "Kết quả: " + a;
+			// Lấy giờ, phút và giây
+const hours = num2.getHours();   // Lấy giờ (0–23)
+const minutes = num2.getMinutes(); // Lấy phút (0–59)
+
+const formattedTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+            document.getElementById('result').innerText = "Kết quả: " + formattedTime;
 			}
         }
     </script>
